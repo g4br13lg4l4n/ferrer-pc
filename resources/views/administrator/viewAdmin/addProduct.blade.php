@@ -33,6 +33,7 @@
                 <input type="text" class="form-control" id="sub_category" name="sub_category">
             </div>
             <div class="form-group">
+            
                 <label for="cost_public">Precio</label>
                 <input type="text" class="form-control" id="cost_public" name="cost_public" >
                 <input type="text" class="form-control" id="cost_middle_distributor" name="cost_middle_distributor">
