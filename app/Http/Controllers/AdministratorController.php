@@ -19,10 +19,8 @@ class AdministratorController extends Controller
         $products = Producto::latest()->paginate(10);
         $brands = Brand::all();
 
-        return view('administrator.dashboard', [
-           'products' => $products,
-           'brands'    => $brands,
-        ]);
+        return $products;
+        
     }
 
     public function addProduct(Request $request)
