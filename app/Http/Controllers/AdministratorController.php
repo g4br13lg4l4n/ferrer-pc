@@ -16,7 +16,7 @@ class AdministratorController extends Controller
     public function index()
     {
         
-        $products = Producto::latest()->paginate(10);
+        $products = Producto::all();
         $brands = Brand::all();
 
         return $products;

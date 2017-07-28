@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Button = () => {
+export const Button = (props) => {
   return (
-    <h1>adasdasdas</h1>
+    <h1>Quiero ser un boton</h1>
   )
 }

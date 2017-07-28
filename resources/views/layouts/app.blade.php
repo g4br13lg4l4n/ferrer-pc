@@ -5,11 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="{{ asset('styles.css') }}" rel="stylesheet">
 </head>
 <body>
-    <h1>Hola cosas</h1>
     @yield('content')
-    <script src="{{ asset('js/bundle.js/bundle.js') }}"></script>
-    <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
+    <script src="{{ asset('bundle.js') }}"></script>
 </body>
 </html>

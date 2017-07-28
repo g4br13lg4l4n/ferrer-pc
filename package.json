@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "webpackDev": "webpack -d --watch",
+    "webpackDev": "webpack -d && php artisan serve",
     "webpackProd": "webpack -p",
     "dev": "npm run webpackDev",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -21,10 +21,14 @@
     "cross-env": "^5.0.1",
     "css-loader": "^0.28.4",
     "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
     "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
     "laravel-mix": "^1.0",
     "lodash": "^4.17.4",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "url-loader": "^0.5.9",
     "vue": "^2.1.10",
     "webpack": "^3.4.1",
     "webpack-php-loader": "^0.3.2"
