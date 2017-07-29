@@ -11,8 +11,10 @@ class App extends React.Component {
       <div>
         <Navbar/>
         <Gallery/>
-        <section>
-          <h2>ENCUENTRA MILES DE PRODUCTOS DE COMPUTO Y SOFTWARE PARA TU HOGAR Y EMPRESA.</h2>
+        <section className="info">
+          <div className="info-content">
+            <h2>ENCUENTRA MILES DE PRODUCTOS DE COMPUTO Y SOFTWARE PARA TU HOGAR Y EMPRESA.</h2>
+          </div>
         </section>
       </div>
     )

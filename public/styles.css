@@ -2819,3 +2819,28 @@ body {
   left: 40%;
   font-size: 1.2em;
 }
+.info {
+  margin: 0;
+  padding: 0;
+  background: rgba(113,13,13,0.85);
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 120px;
+}
+.info-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 775px;
+          flex: 0 0 775px;
+}
+.info-content h2 {
+  font-size: 26px;
+  text-align: center;
+}

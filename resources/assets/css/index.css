@@ -105,3 +105,20 @@ body
   left: 40%
   font-size: 1.2em
 
+
+.info
+  margin: 0
+  padding: 0
+  background: rgba(113,13,13,0.85);
+  color: #FFFFFF
+  display: flex;
+  justify-content: center
+  align-items:center
+  height: 120px
+
+  &-content
+    flex: 0 0 775px
+
+    & h2
+      font-size: 26px
+      text-align: center
