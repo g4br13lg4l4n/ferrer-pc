@@ -8,10 +8,6 @@ export class Gallery extends React.Component {
     super()
   }
 
-  handleImageLoad(event) {
-    console.log('Image loaded ', event.target)
-  }
-
   render () {
 
     let images = [

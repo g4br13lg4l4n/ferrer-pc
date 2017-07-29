@@ -3,7 +3,9 @@ import React from 'react'
 import {render} from 'react-dom'
 
 import {Navbar} from './components/navbar/navbar'
-import {Gallery} from './components/gallery/gallery.js'
+import {Gallery} from './components/gallery/gallery'
+import {Info} from './components/info/info'
+import {Main} from './components/main/main'
 
 class App extends React.Component {
   render () {
@@ -11,11 +13,8 @@ class App extends React.Component {
       <div>
         <Navbar/>
         <Gallery/>
-        <section className="info">
-          <div className="info-content">
-            <h2>ENCUENTRA MILES DE PRODUCTOS DE COMPUTO Y SOFTWARE PARA TU HOGAR Y EMPRESA.</h2>
-          </div>
-        </section>
+        <Info/>
+        <Main/>
       </div>
     )
   }
