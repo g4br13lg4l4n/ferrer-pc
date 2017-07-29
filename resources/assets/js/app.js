@@ -3,13 +3,17 @@ import React from 'react'
 import {render} from 'react-dom'
 
 import {Navbar} from './components/navbar/navbar'
-import {Button} from './components/button.js'
+import {Gallery} from './components/gallery/gallery.js'
 
 class App extends React.Component {
   render () {
     return (
       <div>
         <Navbar/>
+        <Gallery/>
+        <section>
+          <h2>ENCUENTRA MILES DE PRODUCTOS DE COMPUTO Y SOFTWARE PARA TU HOGAR Y EMPRESA.</h2>
+        </section>
       </div>
     )
   }
