@@ -119,3 +119,30 @@ body
     & h2
       font-size: 26px
       text-align: center
+
+.MainContent
+  display: flex
+  justify-content: center
+  align-items: center
+  flex-direction: row
+
+  &-category
+    flex: 0 0 1100px
+    display:flex
+    justify-content: space-between
+    align-items: flex-start
+    flex-direction: row
+    margin-top:50px
+
+    &-categoryMenu
+      flex: 0 0 266px
+      height: 578px
+      background: #FFFFFF
+      box-shadow: 0 16px 34px 7px rgba(121,121,121,0.10)
+      border-radius: 4px
+
+    &-resultBox
+      flex: 0 0 857px
+      height: 828px
+      margin-left:20px
+      border:1px solid black  
