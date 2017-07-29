@@ -10,19 +10,25 @@ export class Navbar extends React.Component {
   render () {
     return (
       <nav className="navbar">
-        <div className="">
-          <img src={ferrerLogo} alt="Ferrer PC"/>
-          <h1>FERRER PC</h1>
-          <i className="fa fa-user-o" aria-hidden="true"></i>
-        </div>
+        <section className="navbar-content">
 
-        <div className="menu">
-          <ul>
-            {this.datos.map( (el,i) => <li key={i}><a href="#">{el}</a></li> )}
-          </ul>
+          <div className="navbar-content-title">
+            <img src={ferrerLogo} alt="Ferrer PC" className="navbar-content-title-logo"/>
+            <h1>FERRER PC</h1>
+          </div>
 
-          <input type="search"/>
-        </div>
+          <div className="navbar-content-navigation">
+            <ul className="navbar-content-navigation-menu">
+              {this.datos.map( (el,i) => <li key={i} className="navbar-content-navigation-menu-item"><a href="#">{el}</a></li> )}
+            </ul>
+
+            <form className="navbar-content-navigation-form">
+              <input type="search" className="navbar-content-navigation-form-input" name="input-search" placeholder="Buscar"/>
+              <i className="busqueda fa fa-search"></i>
+            </form>
+          </div>
+
+        </section>
       </nav>
     )
   }

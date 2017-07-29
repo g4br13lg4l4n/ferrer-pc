@@ -2,6 +2,7 @@ const path = require('path')
 const cleanWebpackPlugin = require('clean-webpack-plugin')
 const browserSyncPlugin = require('browser-sync-webpack-plugin')
 const extractTextPlugin = require('extract-text-webpack-plugin')
+const autoprefixer = require('autoprefixer-stylus')
 
 module.exports = {
   entry : './resources/assets/js/app.js',
@@ -18,7 +19,12 @@ module.exports = {
 
       {
         test : /\.css/, use : extractTextPlugin.extract({
-          use : ['css-loader','stylus-loader']
+          use : ['css-loader',{
+            loader : 'stylus-loader',
+            options : {
+              use : [autoprefixer()]
+            }
+          }]
         })
       },
 
