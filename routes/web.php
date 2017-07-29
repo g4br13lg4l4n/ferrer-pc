@@ -20,11 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->group(function() {
-<<<<<<< HEAD
     //muestra el formulario de login
-=======
-    
->>>>>>> bfa8583463b99bd21e466a5d9d25b5e9c0f80369
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('administrator.login');
     //envía el formulario de login 
     Route::post('/login', 'Auth\AdminLoginController@login')->name('administrator.login.submit');
