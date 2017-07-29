@@ -32,7 +32,6 @@ body
 
     &-title
       display:flex
-      justify-content: space-around
       align-items: center
       flex-direction: row
       flex: 0 1 280px
@@ -43,6 +42,8 @@ body
       & h1
         color: white
         font-size: 22px
+        font-family: 'Helvetica'
+        margin-left: 18px
 
     &-navigation
       display: flex
@@ -61,12 +62,12 @@ body
         font-size: 14px
         font-weight: bold
 
+        &-item:first-child 
+          margin-left: -30px
+
         &-item
           padding:0;
           margin: 0;
-          flex: 0 0 150px
-          display: flex
-          justify-content: center
           text-decoration: none
 
           & a 
@@ -74,9 +75,9 @@ body
             text-decoration: none
             text-align: center
             display: block
-
-        &-item:hover
-          border:1px solid blue
+            font-family: 'Helvetica'
+            font-weight: 400
+            letter-spacing: .5px
 
       &-form
         width: auto 
@@ -85,25 +86,21 @@ body
           border-radius: .25em
           box-shadow: 0 1px 0 #bfbebf
           padding: .5em 1.75em
+          padding-left: 2.7em
           height: 48px
           width: 650px
           position: relative
           border: 0
-          
-          &::-webkit-input-placeholder 
-            color rgba(123,123,123,0.78)
-            font-size: 15px
-            text-align: center
-          &:active::placeholder 
-            text-align: left
-
+          font-size: .9em
+          color: rgba(123,123,123,0.78)
 
 
 .busqueda.fa.fa-search 
   position: absolute
   top: 32% 
-  left: 40%
+  left: 2%
   font-size: 1.2em
+  color: #5C5C5C
 
 
 .info

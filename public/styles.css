@@ -2708,8 +2708,6 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2730,6 +2728,8 @@ body {
 .navbar-content-title h1 {
   color: #fff;
   font-size: 22px;
+  font-family: 'Helvetica';
+  margin-left: 18px;
 }
 .navbar-content-navigation {
   display: -webkit-box;
@@ -2762,18 +2762,12 @@ body {
   font-size: 14px;
   font-weight: bold;
 }
+.navbar-content-navigation-menu-item:first-child {
+  margin-left: -30px;
+}
 .navbar-content-navigation-menu-item {
   padding: 0;
   margin: 0;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 150px;
-          flex: 0 0 150px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-decoration: none;
 }
 .navbar-content-navigation-menu-item a {
@@ -2781,9 +2775,9 @@ body {
   text-decoration: none;
   text-align: center;
   display: block;
-}
-.navbar-content-navigation-menu-item:hover {
-  border: 1px solid #00f;
+  font-family: 'Helvetica';
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 .navbar-content-navigation-form {
   width: auto;
@@ -2794,30 +2788,20 @@ body {
   -webkit-box-shadow: 0 1px 0 #bfbebf;
           box-shadow: 0 1px 0 #bfbebf;
   padding: 0.5em 1.75em;
+  padding-left: 2.7em;
   height: 48px;
   width: 650px;
   position: relative;
   border: 0;
-}
-.navbar-content-navigation-form-input::-webkit-input-placeholder {
+  font-size: 0.9em;
   color: rgba(123,123,123,0.78);
-  font-size: 15px;
-  text-align: center;
-}
-.navbar-content-navigation-form-input:active::-webkit-input-placeholder {
-  text-align: left;
-}
-.navbar-content-navigation-form-input:active:-ms-input-placeholder {
-  text-align: left;
-}
-.navbar-content-navigation-form-input:active::placeholder {
-  text-align: left;
 }
 .busqueda.fa.fa-search {
   position: absolute;
   top: 32%;
-  left: 40%;
+  left: 2%;
   font-size: 1.2em;
+  color: #5c5c5c;
 }
 .info {
   margin: 0;
