@@ -8,10 +8,6 @@ use Auth;
 
 class AdminLoginController extends Controller
 {
-     public function __construct()
-    {
-      $this->middleware('guest:administrator');
-    }
 
     public function showLoginForm()
     {

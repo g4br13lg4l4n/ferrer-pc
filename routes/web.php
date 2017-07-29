@@ -20,8 +20,9 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::prefix('admin')->group(function() {
-    
+    //muestra el formulario de login
     Route::get('/login', 'Auth\AdminLoginController@showLoginForm')->name('administrator.login');
+    //envía el formulario de login 
     Route::post('/login', 'Auth\AdminLoginController@login')->name('administrator.login.submit');
 
     Route::get('/', 'AdministratorController@index')->name('administrator.dashboard');

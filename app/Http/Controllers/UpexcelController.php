@@ -7,9 +7,10 @@ use Illuminate\Http\File;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Validator;
-use Excel;
 use Maatwebsite\Excel\ExcelServiceProvider;
+use Excel;
 use App\Producto;
+use App\Administrator;
 class UpexcelController extends Controller
 {  
     public function upExcel(Request $request){
@@ -40,8 +41,7 @@ class UpexcelController extends Controller
             });
 
         return redirect('/admin/'); 
-     
-        
+
     }
 
     public function getlist(){
