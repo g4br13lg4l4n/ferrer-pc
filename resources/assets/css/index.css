@@ -1,0 +1,107 @@
+@import "../../../node_modules/font-awesome/css/font-awesome.css"
+@import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+
+$ferrerColor = #710D0D
+$backgroundColor = #f1f1f1
+
+body html 
+  margin:0
+  padding:0
+
+
+body
+  background-color: $backgroundColor
+  margin:0
+  padding:0
+
+
+.navbar   
+  background-color: $ferrerColor
+  display:flex
+  justify-content: center
+  align-items: center
+  height: 166px
+
+  &-content
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    flex: 0 1 1200px
+    flex-wrap: wrap;
+
+    &-title
+      display:flex
+      justify-content: space-around
+      align-items: center
+      flex-direction: row
+      flex: 0 1 280px
+      flex-wrap: wrap
+      &-logo
+        width: 70px
+        height: 70px
+      & h1
+        color: white
+        font-size: 22px
+
+    &-navigation
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      width: 650px
+
+      &-menu
+        padding:0
+        width: 650px
+        list-style: none
+        display: flex
+        justify-content: space-around
+        align-items: center
+        font-size: 14px
+        font-weight: bold
+
+        &-item
+          padding:0;
+          margin: 0;
+          flex: 0 0 150px
+          display: flex
+          justify-content: center
+          text-decoration: none
+
+          & a 
+            color: white
+            text-decoration: none
+            text-align: center
+            display: block
+
+        &-item:hover
+          border:1px solid blue
+
+      &-form
+        width: auto 
+        position: relative
+        &-input
+          border-radius: .25em
+          box-shadow: 0 1px 0 #bfbebf
+          padding: .5em 1.75em
+          height: 48px
+          width: 650px
+          position: relative
+          border: 0
+          
+          &::-webkit-input-placeholder 
+            color rgba(123,123,123,0.78)
+            font-size: 15px
+            text-align: center
+          &:active::placeholder 
+            text-align: left
+
+
+
+.busqueda.fa.fa-search 
+  position: absolute
+  top: 32% 
+  left: 40%
+  font-size: 1.2em
+
