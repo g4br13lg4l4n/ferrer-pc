@@ -1,17 +1,11 @@
 import React from 'react'
 
 import {Category} from '../category/category'
-import {Items} from '../items/items'
 
-export const Main = () => {
+export const MainContent = () => {
   return (
-    <section>
-      <div>
-        <Category/>
-      </div>
-      <div>
-        <Items/>
-      </div>
+    <section className="MainContent">
+      <Category/>
     </section>
   )
 }
