@@ -18,9 +18,6 @@ class CreateProductosTable extends Migration
             $table->timestamps();
             $table->string('code')->unique();
             $table->string('name');
-            $table->string('brand')->nullable();
-            $table->string('category')->nullable();
-            $table->string('sub_category')->nullable();
             $table->string('cost_public')->nullable();
             $table->string('cost_middle_distributor')->nullable();
             $table->string('cost_distributor')->nullable();
