@@ -145,4 +145,36 @@ body
       flex: 0 0 857px
       height: 828px
       margin-left:20px
-      border:1px solid black  
+      border:1px solid black
+
+.items {
+  background-color:red
+}
+
+.itemBox
+  margin-rigth: 10px
+  width: 193px
+  height: 354px
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0 4px 14px 7px rgba(121,121,121,0.05);
+  border-radius: 4px;
+  display:flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position:relative
+
+  &-img
+    width: 120px
+    height: 120px
+
+.itemBox:after
+  content: ''
+  border-style: solid
+  border-color: transparent yellow transparent transparet
+  border-width: 10px
+  position: absolute
+  top:0
+  right:0
+  transform:rotate(7deg)
