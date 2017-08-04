@@ -25218,16 +25218,20 @@ var Items = exports.Items = function Items(props) {
     { className: 'itemBox' },
     _react2.default.createElement(
       'span',
-      null,
+      { className: 'itemBox-discount' },
       _react2.default.createElement(
-        'p',
-        null,
-        props.product.desc
-      ),
-      _react2.default.createElement(
-        'p',
-        null,
-        props.product.discount
+        'div',
+        { className: 'itemBox-discount-contentDiscount' },
+        _react2.default.createElement(
+          'p',
+          { className: 'itemBox-discount-contentDiscount-percent' },
+          props.product.discount
+        ),
+        _react2.default.createElement(
+          'p',
+          { className: 'itemBox-discount-contentDiscount-discountText' },
+          props.product.desc
+        )
       )
     ),
     _react2.default.createElement('img', { src: props.product.img, alt: props.product.alt, className: 'itemBox-img' }),

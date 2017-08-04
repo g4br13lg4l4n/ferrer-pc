@@ -5,9 +5,11 @@ export const Items = (props) => {
 
   return (
     <div className="itemBox">
-      <span>
-        <p>{props.product.desc}</p>
-        <p>{props.product.discount}</p>
+      <span className="itemBox-discount">
+        <div className="itemBox-discount-contentDiscount">
+          <p className="itemBox-discount-contentDiscount-percent">{props.product.discount}</p>
+          <p className="itemBox-discount-contentDiscount-discountText">{props.product.desc}</p>
+        </div>
       </span>
       <img src={props.product.img} alt={props.product.alt} className="itemBox-img"/>
       <section className="itemBox-productDescription">
