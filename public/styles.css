@@ -2884,6 +2884,7 @@ body {
   background-color: #f00;
 }
 .itemBox {
+  cursor: pointer;
   margin-rigth: 10px;
   width: 193px;
   height: 354px;
@@ -2911,14 +2912,46 @@ body {
   width: 120px;
   height: 120px;
 }
-.itemBox:after {
-  content: '';
-  border-style: solid;
-  border-color: transparent #ff0 transparent transparet;
-  border-width: 10px;
+.itemBox-productDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+.itemBox-productDescription-name {
+  font-size: 18px;
+  color: #373738;
+  padding: 10px;
+}
+.itemBox-productDescription-price {
+  color: #b53c3c;
+  font-size: 18px;
+}
+.itemBox-productDescription-priceDesc {
+  font-size: 16px;
+  color: #a29d9d;
+  letter-spacing: 0;
+  color: #a29d9d;
+  position: relative;
+}
+.itemBox-productDescription-priceDesc:after {
+  content: "";
+  border-top: 1px solid #000;
+  display: block;
+  height: 1px;
+  width: 100%;
+  border-color: #a29d9d;
   position: absolute;
-  top: 0;
-  right: 0;
-  -webkit-transform: rotate(7deg);
-          transform: rotate(7deg);
+  left: 0;
+  top: 0.5em;
 }

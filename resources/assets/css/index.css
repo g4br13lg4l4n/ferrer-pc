@@ -152,6 +152,7 @@ body
 }
 
 .itemBox
+  cursor: pointer
   margin-rigth: 10px
   width: 193px
   height: 354px
@@ -169,12 +170,36 @@ body
     width: 120px
     height: 120px
 
-.itemBox:after
-  content: ''
-  border-style: solid
-  border-color: transparent yellow transparent transparet
-  border-width: 10px
-  position: absolute
-  top:0
-  right:0
-  transform:rotate(7deg)
+  &-productDescription
+    display:flex
+    justify-content:center
+    align-items:center
+    flex-direction: column
+    text-align: center
+
+    &-name
+      font-size: 18px
+      color: #373738
+      padding: 10px
+
+    &-price
+      color: #B53C3C
+      font-size: 18px
+
+    &-priceDesc
+      font-size: 16px
+      color: #A29D9D
+      letter-spacing: 0
+      color: #A29D9D
+      position:relative
+
+    &-priceDesc:after
+      content:""
+      border-top: 1px solid black
+      display: block
+      height: 1px
+      width: 100%
+      border-color: #A29D9D
+      position: absolute
+      left: 0
+      top: 0.5em        
