@@ -16,6 +16,26 @@ module.exports = {
     }
   },
 
-  fillArray () {
+  fillArray (n) {
+
+    let _self = this
+
+    let items = []
+
+    while(n-- > 0) {
+      items.push({
+      name : 'Missha All Around Safe Block Sebum Zero Sun',
+      price : 120,
+      alt : 'soy un alt',
+      img : Logo,
+      price : 99.00,
+      priceDesc : 79.00,
+      discount : '20%',
+      desc: 'OFERTA'
+
+    })
+    }
+
+    return items
   }
 }

@@ -2872,19 +2872,36 @@ body {
           box-shadow: 0 16px 34px 7px rgba(121,121,121,0.1);
   border-radius: 4px;
 }
+.MainContent-category-categoryTitle {
+  font-size: 11px;
+  color: #a3a3a3;
+  font-size: 11px;
+  margin-left: 5px;
+}
 .MainContent-category-resultBox {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 857px;
           flex: 0 0 857px;
   height: 828px;
   margin-left: 20px;
-}
-.items {
-  background-color: #f00;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  border-top: 1px solid #e1e1e1;
+  padding-top: 35px;
 }
 .itemBox {
   cursor: pointer;
-  margin-rigth: 10px;
+  margin-right: 19px;
   width: 193px;
   height: 354px;
   background: #fff;
