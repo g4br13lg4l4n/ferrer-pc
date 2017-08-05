@@ -25151,8 +25151,9 @@ var Category = exports.Category = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).call(this));
 
     _this.state = {
-      count: 0
+      show: false
     };
+
     _this.showCategories = _this.showCategories.bind(_this);
     return _this;
   }
@@ -25160,17 +25161,17 @@ var Category = exports.Category = function (_React$Component) {
   _createClass(Category, [{
     key: 'showCategories',
     value: function showCategories() {
-      this.setState = {
-        count: this.state.count + 1
-      };
-
-      console.log(this.setState.count);
+      this.setState({
+        show: !this.state.show
+      });
     }
   }, {
     key: 'render',
     value: function render() {
-
+      var categorias = (0, _utils.fillCategories)(6);
       var obj = (0, _utils.getData)();
+
+      console.log(categorias);
 
       return _react2.default.createElement(
         'section',
@@ -25179,12 +25180,17 @@ var Category = exports.Category = function (_React$Component) {
           'div',
           { className: 'MainContent-category-categoryMenu' },
           _react2.default.createElement(
-            'h3',
+            'h2',
             { className: 'MainContent-category-categoryTitle' },
-            'CATEGORIAS'
+            'Categorias'
           ),
-          this.state.count,
-          _react2.default.createElement(_categories.Categories, { onClick: this.showCategories, show: true })
+          categorias.map(function (el, i) {
+            return _react2.default.createElement(
+              'h1',
+              { key: i },
+              el.categorie.name
+            );
+          })
         ),
         _react2.default.createElement(
           'div',
@@ -25242,8 +25248,32 @@ module.exports = {
         img: _discoduro2.default
       }, _defineProperty(_items$push, 'price', 99.00), _defineProperty(_items$push, 'priceDesc', 79.00), _defineProperty(_items$push, 'discount', '20%'), _defineProperty(_items$push, 'desc', 'OFERTA'), _items$push));
     }
-
     return items;
+  },
+
+
+  getCategories: function getCategories() {
+    return {
+      categorie: {
+        name: 'title',
+        subcategories: ['A', 'B', 'C', 'D']
+      }
+    };
+  },
+
+  fillCategories: function fillCategories(n) {
+    var categories = [];
+
+    while (n-- > 0) {
+      categories.push({
+        categorie: {
+          name: 'Discos duros',
+          subcategories: ['A', 'B', 'C', 'D']
+        }
+      });
+    }
+
+    return categories;
   }
 };
 
@@ -25337,15 +25367,17 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Categories = exports.Categories = function Categories(props) {
   var show = props.show;
-
+  var data = props.data;
+  var categorias = fillCategories(6);
+  console.log(categorias);
   if (show === true) {
     return _react2.default.createElement(
       'section',
       null,
       _react2.default.createElement(
-        'ul',
+        'h1',
         null,
-        'sere una seccion ekis de'
+        data.name
       )
     );
   }
@@ -25353,7 +25385,7 @@ var Categories = exports.Categories = function Categories(props) {
   return _react2.default.createElement(
     'h1',
     null,
-    'no mandaste nada perrooooo :v'
+    'no mandaste nada perrooooo >:v'
   );
 };
 

@@ -34,8 +34,43 @@ module.exports = {
       desc: 'OFERTA'
 
     })
+  }
+    return items
+  },
+
+  getCategories: () =>  {
+    return {
+      categorie : {
+        name : 'title',
+        subcategories : [
+          'A',
+          'B',
+          'C',
+          'D'
+        ]
+      }
+    }
+  },
+
+  fillCategories(n) {
+    let categories = []
+
+    while(n-- > 0) {
+      categories.push({
+      categorie : {
+        name : 'Discos duros',
+        subcategories : [
+          'A',
+          'B',
+          'C',
+          'D'
+        ]
+      }
+    })
     }
 
-    return items
+    return categories
+
   }
+
 }

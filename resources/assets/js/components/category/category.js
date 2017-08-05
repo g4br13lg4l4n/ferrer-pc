@@ -1,37 +1,43 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import {getData, fillArray} from '../../utils/utils'
+import {getData, fillArray, getCategories, fillCategories} from '../../utils/utils'
 import {Items} from './items'
 import {Categories} from './categories'
 
 export class Category extends React.Component {
   constructor () {
     super ()
+
     this.state = {
-      count : 0
+      show : false
     }
+
     this.showCategories = this.showCategories.bind(this)
   }
 
-  showCategories() {
-    this.setState = {
-      count : this.state.count + 1
-    }
-
-    console.log(this.setState.count)
+  showCategories () {
+    this.setState({
+      show : !this.state.show
+    })
   }
-
+  
   render () {
-    
+    let categorias = fillCategories(6)
     let obj = getData()
+
+    console.log(categorias)
 
     return (
       <section className="MainContent-category">
         <div className="MainContent-category-categoryMenu">
-          <h3 className="MainContent-category-categoryTitle">CATEGORIAS</h3>
-          {this.state.count}
-          <Categories onClick={this.showCategories} show = {true}/>
+
+          <h2 className="MainContent-category-categoryTitle">Categorias</h2>
+          {categorias.map( (el,i) => {
+            return(
+              <h1 key={i}>{el.categorie.name}</h1>
+            )
+          })}
         </div>
 
         <div className="MainContent-category-resultBox">
