@@ -25363,9 +25363,24 @@ var Categories = exports.Categories = function Categories(props) {
   var data = props.data;
   console.log(data);
   return _react2.default.createElement(
-    'h1',
-    null,
-    data.categorie.name
+    "div",
+    { className: "" },
+    _react2.default.createElement(
+      "h1",
+      null,
+      data.categorie.name
+    ),
+    _react2.default.createElement(
+      "ul",
+      null,
+      data.categorie.subcategories.map(function (el, i) {
+        return _react2.default.createElement(
+          "li",
+          { key: i },
+          "el"
+        );
+      })
+    )
   );
 };
 
