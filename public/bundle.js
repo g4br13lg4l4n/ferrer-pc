@@ -25171,8 +25171,6 @@ var Category = exports.Category = function (_React$Component) {
       var categorias = (0, _utils.fillCategories)(6);
       var obj = (0, _utils.getData)();
 
-      console.log(categorias);
-
       return _react2.default.createElement(
         'section',
         { className: 'MainContent-category' },
@@ -25185,11 +25183,7 @@ var Category = exports.Category = function (_React$Component) {
             'Categorias'
           ),
           categorias.map(function (el, i) {
-            return _react2.default.createElement(
-              'h1',
-              { key: i },
-              el.categorie.name
-            );
+            return _react2.default.createElement(_categories.Categories, { key: i, data: el });
           })
         ),
         _react2.default.createElement(
@@ -25366,26 +25360,12 @@ var _react2 = _interopRequireDefault(_react);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Categories = exports.Categories = function Categories(props) {
-  var show = props.show;
   var data = props.data;
-  var categorias = fillCategories(6);
-  console.log(categorias);
-  if (show === true) {
-    return _react2.default.createElement(
-      'section',
-      null,
-      _react2.default.createElement(
-        'h1',
-        null,
-        data.name
-      )
-    );
-  }
-
+  console.log(data);
   return _react2.default.createElement(
     'h1',
     null,
-    'no mandaste nada perrooooo >:v'
+    data.categorie.name
   );
 };
 

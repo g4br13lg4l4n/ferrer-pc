@@ -26,8 +26,6 @@ export class Category extends React.Component {
     let categorias = fillCategories(6)
     let obj = getData()
 
-    console.log(categorias)
-
     return (
       <section className="MainContent-category">
         <div className="MainContent-category-categoryMenu">
@@ -35,7 +33,7 @@ export class Category extends React.Component {
           <h2 className="MainContent-category-categoryTitle">Categorias</h2>
           {categorias.map( (el,i) => {
             return(
-              <h1 key={i}>{el.categorie.name}</h1>
+              <Categories key={i} data = {el} />
             )
           })}
         </div>
