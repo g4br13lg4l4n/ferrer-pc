@@ -25361,7 +25361,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Categories = exports.Categories = function Categories(props) {
   var data = props.data;
-  console.log(data);
   return _react2.default.createElement(
     "div",
     { className: "" },
