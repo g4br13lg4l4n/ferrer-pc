@@ -1,8 +1,8 @@
 @import "../../../node_modules/font-awesome/css/font-awesome.css"
-@import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css";
+@import "../../../node_modules/react-image-gallery/styles/css/image-gallery.css"
 
-$ferrerColor = #710D0D
-$backgroundColor = #f1f1f1
+$ferrerColor = #710D0D;
+$backgroundColor = #f1f1f1;
 
 body html 
   margin:0
@@ -93,7 +93,7 @@ body
           border: 0
           font-size: .9em
           color: rgba(123,123,123,0.78)
-
+  
 
 .busqueda.fa.fa-search 
   position: absolute
@@ -145,7 +145,7 @@ body
       font-size: 11px
       color: #A3A3A3  
       font-size: 11px
-      margin-left: 5px
+      margin-left: 20px
 
     &-resultBox
       flex: 0 0 857px
@@ -243,3 +243,130 @@ body
       position: absolute
       left: 0
       top: 0.5em        
+
+
+.Categories
+  border:1px solid red
+  margin-left:20px
+  padding: 0
+
+  &-name
+    font-size: 15px
+    color: #171717
+    position: relative
+    overflow: hidden
+
+  &-subcategories
+    position:absolute
+    padding:0
+    border:1px solid yellow
+    
+    &-item
+      list-style:none
+      padding:0
+      margin:0
+      font-size: 15px
+      color: #000000
+
+.expand
+  float: right
+  display: inline
+  transition: all .2s ease
+  margin: 0 10px
+
+.sub-menu
+  cursor: pointer;
+  padding: 10px;
+  background: #ffffff;
+  position: relative;
+  color:$maincolor;
+  border-bottom: 1px solid #dedede;
+  font-size: 1.5em;
+  font-weight: 300;
+  text-rendering: optimizeLegibility;
+  letter-spacing: .5px;
+  padding-right: 50px;
+  
+  &:before, &:after 
+    content: "";
+    width: 3px;
+    height: 25px;
+    background: red;
+    border-radius: 3px;
+    position: absolute;
+    right: 22px;
+    top: calc(28.7px - 12.5px);
+    transition: all .2s ease;
+  
+  &:after 
+    transform: rotate(90deg)
+
+.open:before 
+  animation: turn-plus;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+
+
+.open:after 
+  animation: turn-crossbar;
+  animation-duration: .3s;
+  animation-fill-mode: forwards;
+
+
+@keyframes turn-plus 
+  0% 
+    transform: translate(0,0);
+  
+  50% 
+    transform: rotate(0deg);
+  
+  100% 
+    transform: rotate(90deg);
+  
+
+
+@keyframes turn-crossbar 
+  0% 
+    transform:none;
+    transform: rotate(90deg)
+  
+  50% 
+    transform: rotate(0deg);
+  
+  100% 
+    transform: rotate(90deg);
+  
+
+
+.sidebar-menu:hover 
+  background: red
+
+.sub-menu 
+  color: red
+  border-bottom: 1px solid #dedede;
+  font-size: 1em;
+  display: none;
+
+  &:last-child 
+    border-bottom: 0;
+  
+
+
+.sub-menu li:hover 
+  background: #cccccc;
+  cursor: pointer;
+
+
+.sub-menu li 
+  padding: 10px;
+  background: #d7d7d7;
+  border-bottom: 1px solid #dedede;
+
+  &:last-child 
+    border-bottom: 0;
+  
+
+.sub-menu ul 
+  list-style-type: none;
+  margin: 0;
+  padding: 0;

@@ -57,16 +57,19 @@ module.exports = {
 
     while(n-- > 0) {
       categories.push({
-      categorie : {
-        name : 'Discos duros',
-        subcategories : [
-          'A',
-          'B',
-          'C',
-          'D'
+        items: [
+          {
+            name : 'Nombre Categoria',
+            subcategories: [
+              'subcat1',
+              'subcat1',
+              'subcat1',
+              'subcat1',
+              'subcat1'
+            ]
+          }
         ]
-      }
-    })
+      })
     }
 
     return categories
