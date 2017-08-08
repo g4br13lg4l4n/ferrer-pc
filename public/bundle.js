@@ -25260,10 +25260,10 @@ module.exports = {
 
     while (n-- > 0) {
       categories.push({
-        categorie: {
-          name: 'Discos duros',
-          subcategories: ['A', 'B', 'C', 'D']
-        }
+        items: [{
+          name: 'Nombre Categoria',
+          subcategories: ['subcat1', 'subcat1', 'subcat1', 'subcat1', 'subcat1']
+        }]
       });
     }
 
@@ -25361,28 +25361,52 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var Categories = exports.Categories = function Categories(props) {
   var data = props.data;
-  console.log(data);
   return _react2.default.createElement(
     "div",
-    { className: "" },
-    _react2.default.createElement(
-      "h1",
-      null,
-      data.categorie.name
-    ),
-    _react2.default.createElement(
-      "ul",
-      null,
-      data.categorie.subcategories.map(function (el, i) {
-        return _react2.default.createElement(
-          "li",
-          { key: i },
-          "el"
-        );
-      })
-    )
+    { className: "Categories" },
+    data.items.map(function (el, i) {
+      return _react2.default.createElement(
+        "div",
+        { key: i },
+        _react2.default.createElement(
+          "div",
+          null,
+          el.name,
+          _react2.default.createElement("div", { className: "expand" })
+        ),
+        _react2.default.createElement(
+          "div",
+          { className: "sub-menu" },
+          _react2.default.createElement(
+            "ul",
+            null,
+            el.subcategories.map(function (el, index) {
+              return _react2.default.createElement(
+                "li",
+                { key: index },
+                el
+              );
+            })
+          )
+        )
+      );
+    })
   );
 };
+
+/*return(
+    <div className = "Categories">
+      <h1 className="Categories-name">{data.categorie.name}</h1>
+        {data.categorie.subcategories.map( (el, i) => {
+          return (
+            <ul className="Categories-subcategories">
+              <li  className="Categories-subcategories-item" key = {i}>el</li>
+            </ul>
+          )
+        })}
+    </div>
+  )
+*/
 
 /***/ })
 /******/ ]);
