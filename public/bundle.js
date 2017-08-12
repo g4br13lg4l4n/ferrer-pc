@@ -25171,6 +25171,8 @@ var Category = exports.Category = function (_React$Component) {
       var categorias = (0, _utils.fillCategories)(6);
       var obj = (0, _utils.getData)();
 
+      console.log(categorias);
+
       return _react2.default.createElement(
         'section',
         { className: 'MainContent-category' },

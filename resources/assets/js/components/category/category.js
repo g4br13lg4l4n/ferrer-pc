@@ -5,6 +5,8 @@ import {getData, fillArray, getCategories, fillCategories} from '../../utils/uti
 import {Items} from './items'
 import {Categories} from './categories'
 
+
+
 export class Category extends React.Component {
   constructor () {
     super ()
@@ -25,6 +27,8 @@ export class Category extends React.Component {
   render () {
     let categorias = fillCategories(6)
     let obj = getData()
+
+    console.log(categorias);
 
     return (
       <section className="MainContent-category">
