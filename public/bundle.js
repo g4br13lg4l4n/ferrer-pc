@@ -25148,31 +25148,13 @@ var Category = exports.Category = function (_React$Component) {
   function Category() {
     _classCallCheck(this, Category);
 
-    var _this = _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).call(this));
-
-    _this.state = {
-      show: false
-    };
-
-    _this.showCategories = _this.showCategories.bind(_this);
-    return _this;
+    return _possibleConstructorReturn(this, (Category.__proto__ || Object.getPrototypeOf(Category)).call(this));
   }
 
   _createClass(Category, [{
-    key: 'showCategories',
-    value: function showCategories() {
-      this.setState({
-        show: !this.state.show
-      });
-    }
-  }, {
     key: 'render',
     value: function render() {
-      var categorias = (0, _utils.fillCategories)(6);
-      var obj = (0, _utils.getData)();
-
-      console.log(categorias);
-
+      var categories = (0, _utils.fillCategories)(6);
       return _react2.default.createElement(
         'section',
         { className: 'MainContent-category' },
@@ -25184,15 +25166,8 @@ var Category = exports.Category = function (_React$Component) {
             { className: 'MainContent-category-categoryTitle' },
             'Categorias'
           ),
-          categorias.map(function (el, i) {
-            return _react2.default.createElement(_categories.Categories, { key: i, data: el });
-          })
-        ),
-        _react2.default.createElement(
-          'div',
-          { className: 'MainContent-category-resultBox' },
-          (0, _utils.fillArray)(5).map(function (el, i) {
-            return _react2.default.createElement(_items.Items, { product: obj, key: i });
+          categories.map(function (el, i) {
+            return _react2.default.createElement(_categories.Categories, { props: el, key: i });
           })
         )
       );
@@ -25218,16 +25193,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 module.exports = {
-  getData: function getData() {
-    var _ref;
-
-    return _ref = {
-      name: 'Missha All Around Safe Block Sebum Zero Sun',
-      price: 120,
-      alt: 'soy un alt',
-      img: _discoduro2.default
-    }, _defineProperty(_ref, 'price', 99.00), _defineProperty(_ref, 'priceDesc', 79.00), _defineProperty(_ref, 'discount', '20%'), _defineProperty(_ref, 'desc', 'OFERTA'), _ref;
-  },
   fillArray: function fillArray(n) {
 
     var _self = this;
@@ -25246,26 +25211,13 @@ module.exports = {
     }
     return items;
   },
-
-
-  getCategories: function getCategories() {
-    return {
-      categorie: {
-        name: 'title',
-        subcategories: ['A', 'B', 'C', 'D']
-      }
-    };
-  },
-
   fillCategories: function fillCategories(n) {
     var categories = [];
 
     while (n-- > 0) {
       categories.push({
-        items: [{
-          name: 'Nombre Categoria',
-          subcategories: ['subcat1', 'subcat1', 'subcat1', 'subcat1', 'subcat1']
-        }]
+        name: 'categorie names',
+        subcategories: ['sub1', 'sub2', 'sub3']
       });
     }
 
@@ -25355,60 +25307,59 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Categories = undefined;
 
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
 var _react = __webpack_require__(10);
 
 var _react2 = _interopRequireDefault(_react);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var Categories = exports.Categories = function Categories(props) {
-  var data = props.data;
-  return _react2.default.createElement(
-    "div",
-    { className: "Categories" },
-    data.items.map(function (el, i) {
-      return _react2.default.createElement(
-        "div",
-        { key: i },
-        _react2.default.createElement(
-          "div",
-          null,
-          el.name,
-          _react2.default.createElement("div", { className: "expand" })
-        ),
-        _react2.default.createElement(
-          "div",
-          { className: "sub-menu" },
-          _react2.default.createElement(
-            "ul",
-            null,
-            el.subcategories.map(function (el, index) {
-              return _react2.default.createElement(
-                "li",
-                { key: index },
-                el
-              );
-            })
-          )
-        )
-      );
-    })
-  );
-};
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-/*return(
-    <div className = "Categories">
-      <h1 className="Categories-name">{data.categorie.name}</h1>
-        {data.categorie.subcategories.map( (el, i) => {
-          return (
-            <ul className="Categories-subcategories">
-              <li  className="Categories-subcategories-item" key = {i}>el</li>
-            </ul>
-          )
-        })}
-    </div>
-  )
-*/
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Categories = exports.Categories = function (_React$Component) {
+  _inherits(Categories, _React$Component);
+
+  function Categories() {
+    _classCallCheck(this, Categories);
+
+    var _this = _possibleConstructorReturn(this, (Categories.__proto__ || Object.getPrototypeOf(Categories)).call(this));
+
+    _this.state = {
+      addClass: false
+    };
+
+    _this.showSubcategories = _this.showSubcategories.bind(_this);
+    return _this;
+  }
+
+  _createClass(Categories, [{
+    key: 'showSubcategories',
+    value: function showSubcategories() {
+      this.setState({
+        addClass: !this.state.addClass
+      });
+      console.log(this.state.addClass);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'h1',
+        {
+          onClick: this.showSubcategories,
+          className: this.state.addClass ? 'test' : '' },
+        'Soy una propiedad'
+      );
+    }
+  }]);
+
+  return Categories;
+}(_react2.default.Component);
 
 /***/ })
 /******/ ]);

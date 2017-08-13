@@ -1,48 +1,27 @@
 import React from 'react'
 
-export const Categories = (props) => {
-  let data = props.data
-  return(
-    <div className = "Categories">
-      
-      {data.items.map( (el, i) => {
-        return (
-          <div key={i}>
-            <div>
-              {el.name}
-              <div className="expand"></div>
-            </div>
+export class Categories extends React.Component {
+  constructor () {
+    super ()
+    this.state = {
+      addClass : false
+    }
 
-            <div className="sub-menu">
-              <ul>
-                {el.subcategories.map( (el, index) => {
-                  return (
-                    <li key={index}>{el}</li>
-                  )
-                })}
-              </ul>
-            </div>
+    this.showSubcategories = this.showSubcategories.bind(this)
+  }
 
-          </div>
-        )
-      })}
+  showSubcategories() {
+    this.setState({
+      addClass : !this.state.addClass
+    })
+    console.log(this.state.addClass)
+  }
 
-    </div>
-  )
+  render () {
+    return (
+      <h1 
+      onClick={this.showSubcategories}
+      className={this.state.addClass ? 'test':''}>Soy una propiedad</h1>
+    )
+  }
 }
-
-
-
-/*return(
-    <div className = "Categories">
-      <h1 className="Categories-name">{data.categorie.name}</h1>
-        {data.categorie.subcategories.map( (el, i) => {
-          return (
-            <ul className="Categories-subcategories">
-              <li  className="Categories-subcategories-item" key = {i}>el</li>
-            </ul>
-          )
-        })}
-    </div>
-  )
-*/
