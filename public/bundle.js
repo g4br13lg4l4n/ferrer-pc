@@ -25224,9 +25224,27 @@ module.exports = {
     var categories = [];
 
     while (n-- > 0) {
+      var _ref, _ref2;
+
       categories.push({
         name: 'categorie names',
-        subcategories: ['sub1', 'sub2', 'sub3']
+        subcategories: [{
+          subname: 'subCategorie name',
+          items: [(_ref = {
+            name: 'Missha All Around Safe Block Sebum Zero Sun',
+            price: 120,
+            alt: 'soy un alt',
+            img: _discoduro2.default
+          }, _defineProperty(_ref, 'price', 99.00), _defineProperty(_ref, 'priceDesc', 79.00), _defineProperty(_ref, 'discount', '20%'), _defineProperty(_ref, 'desc', 'OFERTA'), _ref)]
+        }, {
+          subname: 'subCategorie name',
+          items: [(_ref2 = {
+            name: 'Missha All Around Safe Block Sebum Zero Sun',
+            price: 120,
+            alt: 'soy un alt',
+            img: _discoduro2.default
+          }, _defineProperty(_ref2, 'price', 99.00), _defineProperty(_ref2, 'priceDesc', 79.00), _defineProperty(_ref2, 'discount', '20%'), _defineProperty(_ref2, 'desc', 'OFERTA'), _ref2)]
+        }]
       });
     }
 
@@ -25352,28 +25370,40 @@ var Subcategories = exports.Subcategories = function (_React$Component) {
     };
     _this.subcategories = props.data;
 
+    _this.switchItems = _this.switchItems.bind(_this);
     _this.showItems = _this.showItems.bind(_this);
     return _this;
   }
 
   _createClass(Subcategories, [{
-    key: 'showItems',
-    value: function showItems() {
+    key: 'switchItems',
+    value: function switchItems() {
       this.setState({
         showItems: !this.state.showItems
       });
       console.log(this.state.showItems);
     }
   }, {
+    key: 'showItems',
+    value: function showItems() {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'soy un item xD'
+      );
+      console.log('mostrare los items');
+    }
+  }, {
     key: 'render',
     value: function render() {
+      console.log(this.subcategories);
       return _react2.default.createElement(
         'li',
-        { onClick: this.showItems },
+        { onClick: this.switchItems },
         _react2.default.createElement(
-          'a',
+          'h1',
           null,
-          this.subcategories
+          'object'
         )
       );
     }
