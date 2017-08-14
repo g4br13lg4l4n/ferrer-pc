@@ -2663,7 +2663,8 @@
     .image-gallery-index {
       font-size: .8em;
       padding: 5px 10px; } }
-body html {
+#app
+  background-color: #710D0D;body html {
   margin: 0;
   padding: 0;
 }

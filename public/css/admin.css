@@ -1,0 +1,41 @@
+@font-face {
+  font-family: futuraBold;
+  font-style: normal;
+  src: url("../fonts/Futura_Bold.otf");
+}
+#app,
+html {
+  background-color: #710d0d;
+}
+.panel-login-admin {
+  color: #fff;
+  margin-top: 8vh;
+}
+.panel-login-admin .login-admin-title {
+  font-size: 2.2em;
+  font-family: 'futuraBold';
+  text-align: center;
+  letter-spacing: 0.6px;
+}
+.panel-login-admin .login-admin-logoTitle {
+  margin-top: 5vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.panel-login-admin .login-admin-logoTitle img {
+  width: 120px;
+  height: 120px;
+}
+.panel-login-admin .login-admin-logoTitle .m-l-2 {
+  margin-left: 2vw;
+}
+.panel-login-admin .form-horizontal {
+  margin-top: 10vh;
+}
+.send-login {
+  text-align: center;
+  background-color: #fff;
+  color: #710d0d;
+}
