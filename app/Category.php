@@ -4,18 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Brand extends Model
+class Category extends Model
 {
     protected $guarded = [];
 
-    public function serchDataToProduct()
+    public function serchCategoryToProduct()
     {
         return $this->hasMany('App\Producto');
     } 
 
-    public function brand()
+    public function searchBrandtoCategory()
     {
-        return Brand::all();
+        return $this->hasMany('App\Brand');
     }
-    
 }
