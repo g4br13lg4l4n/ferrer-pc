@@ -1,0 +1,85 @@
+.itemBox
+  cursor: pointer
+  margin-right: 19px
+  width: 193px
+  height: 354px
+  background: #FFFFFF;
+  border: 1px solid #E4E4E4;
+  box-shadow: 0 4px 14px 7px rgba(121,121,121,0.05);
+  border-radius: 4px;
+  display:flex
+  justify-content: center
+  align-items: center
+  flex-direction: column
+  position:relative
+
+  &-discount
+    transform:rotate(90deg)
+    width: 104px
+    height: 81px
+    background-image:url("../img/triangulo.png")
+    background-repeat: no-repeat
+    background-size:contain
+    position:absolute
+    right:-12px
+    top: 11px
+    z-index: 10
+
+    &-contentDiscount
+      position: relative
+
+      &-percent
+        margin: 0
+        padding: 6px
+        text-align:left
+        position: absolute
+        transform: rotate(-43deg)
+        font-size: 12px
+        color: #B53C3C
+
+      &-discountText
+        margin: 0
+        padding: 19px 4px
+        text-align:left
+        position: absolute
+        transform: rotate(-43deg)
+        font-size: 15px
+        color: #FF0808
+
+  &-img
+    width: 120px
+    height: 120px
+
+  &-productDescription
+    display:flex
+    justify-content:center
+    align-items:center
+    flex-direction: column
+    text-align: center
+
+    &-name
+      font-size: 18px
+      color: #373738
+      padding: 10px
+
+    &-price
+      color: #B53C3C
+      font-size: 18px
+
+    &-priceDesc
+      font-size: 16px
+      color: #A29D9D
+      letter-spacing: 0
+      color: #A29D9D
+      position:relative
+
+    &-priceDesc:after
+      content:""
+      border-top: 1px solid black
+      display: block
+      height:   1px
+      width: 100%
+      border-color: #A29D9D
+      position: absolute
+      left: 0
+      top: 0.5em

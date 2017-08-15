@@ -1,6 +1,9 @@
 import React from 'react'
 
 import {Items} from './items'
+
+import axios from 'axios'
+
 export class Subcategories extends React.Component {
   constructor (props) {
     super()
@@ -9,20 +12,29 @@ export class Subcategories extends React.Component {
     }
     this.subcategories = props.data
 
+    this.switchItems = this.switchItems.bind(this)
     this.showItems = this.showItems.bind(this)
   }
 
-  showItems() {
+  switchItems() {
     this.setState({
       showItems : !this.state.showItems
     })
     console.log(this.state.showItems)
   }
 
-  render () {
+  showItems() {
     return (
-      <li onClick={this.showItems}>
-        <a>{this.subcategories}</a>
+      <h1>soy un item xD</h1>
+    )
+    console.log('mostrare los items')
+  }
+
+  render () {
+    console.log(this.subcategories)
+    return (
+      <li onClick={this.switchItems}>
+        <h1>object</h1>
       </li>
     )
   }

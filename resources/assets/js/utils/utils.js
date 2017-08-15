@@ -31,9 +31,34 @@ module.exports = {
       categories.push({
         name : 'categorie names',
         subcategories : [
-          'sub1',
-          'sub2',
-          'sub3'
+          {
+            subname : 'subCategorie name',
+            items : [{
+              name : 'Missha All Around Safe Block Sebum Zero Sun',
+              price : 120,
+              alt : 'soy un alt',
+              img : Logo,
+              price : 99.00,
+              priceDesc : 79.00,
+              discount : '20%',
+              desc: 'OFERTA'
+        
+            }]
+          },
+          {
+            subname : 'subCategorie name',
+            items : [{
+              name : 'Missha All Around Safe Block Sebum Zero Sun',
+              price : 120,
+              alt : 'soy un alt',
+              img : Logo,
+              price : 99.00,
+              priceDesc : 79.00,
+              discount : '20%',
+              desc: 'OFERTA'
+        
+            }]
+          }
         ]
       })
     }
