@@ -5,11 +5,22 @@ import {fillArray,fillCategories} from '../../utils/utils'
 
 import {Categories} from './categories'
 
+import axios from 'axios'
+
 export class Category extends React.Component {
   constructor () {
     super ()
 
     this.showCategories = this.showCategories.bind(this)
+  }
+
+  componentDidMount() {
+    axios.get('/admin').then( (res) => {
+      console.log(res.data)
+    }).catch( (err) => {
+      console.log(err)
+    })
+    console.log('componente montado')
   }
 
   showCategories () {
@@ -28,7 +39,6 @@ export class Category extends React.Component {
     return (
       <section className="MainContent-category">
         <div className="MainContent-category-categoryMenu">
-
           <h2 className="MainContent-category-categoryTitle">Categorias</h2>
           {this.showCategories()}
         </div>
