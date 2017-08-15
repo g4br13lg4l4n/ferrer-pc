@@ -20,6 +20,7 @@ class CategoryAndBrandAndProducto extends Model
     {
         $all = $this->all()->sortByDesc('category_id');
         $lastCategory = 0;
+        $cont = 0;
         foreach ($all as $key => $value) {
         //    $CBP[] = array( "Category"=> Category::find($value->category_id), "Brand" => Brand::find($value->brand_id), 
         //    'Producto' => Producto::find($value->producto_id));
@@ -28,15 +29,27 @@ class CategoryAndBrandAndProducto extends Model
             $pord = Producto::find($value->producto_id);
 
 //            $CBP[] = array( "Category" => array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) ) );
+//            $CBP[] = array($value->category_id, array( "Category" => array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) ) ) );
 
             if($value->category_id == $lastCategory){
-//                $CBP[$key] = array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) );            
+            //    array_push(  $CBP[0], array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) )  ); si agarra
+            //    array_push(  $CBP[], array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) )  );   error
+
+                array_push($CBP[$cont-1],  array( "Brand" => array( $brd, 'Producto' => $pord ) )  );
+                $cuenta = false;
+                    
             }else{
-                $CBP[] = array( "Category" => array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) ) );
+            //    $CBP[] = array( "Category" => array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) ) );
+                $CBP[] = array($value->category_id, array( "Category" => array( $cat, array( "Brand" => array( $brd, 'Producto' => $pord ) ) ) ) );
+                $cuenta = true;
             }
 
             $lastCategory = $value->category_id;
-           
+            
+            if($cuenta){
+                $cont++; 
+            }
+            
         }
         return $CBP;
         
