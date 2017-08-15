@@ -3046,3 +3046,91 @@ body {
 .test {
   display: none;
 }
+.footer {
+  color: #f1f1f1;
+  height: 500px;
+  background-color: #710d0d;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer-content {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-content-form {
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.footer-content-form input {
+  width: 330px;
+  height: 50px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  border: none;
+  line-height: normal;
+  padding-left: 10px;
+}
+.footer-content-form input:nth-child(4) {
+  height: 121px;
+}
+.footer-section {
+  width: 340px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer-section input {
+  color: #fff;
+  height: 31px;
+  width: 125px;
+  background: #c7071e;
+  border-radius: 9px;
+  border: none;
+  border-style: none;
+  outline: 0;
+}
+.footer-information {
+  text-align: center;
+}
+.footer-img {
+  width: 100px;
+  height: 100px;
+}

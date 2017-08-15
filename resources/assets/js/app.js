@@ -6,6 +6,7 @@ import {Navbar} from './components/navbar/navbar'
 import {Gallery} from './components/gallery/gallery'
 import {Info} from './components/info/info'
 import {MainContent} from './components/main/main'
+import {Footer} from './components/footer/footer'
 
 class App extends React.Component {
   render () {
@@ -15,6 +16,7 @@ class App extends React.Component {
         <Gallery/>
         <Info/>
         <MainContent/>
+        <Footer/>
       </div>
     )
   }
