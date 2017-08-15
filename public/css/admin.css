@@ -3,6 +3,7 @@
   font-style: normal;
   src: url("../fonts/Futura_Bold.otf");
 }
+/* Login admin */
 #app,
 html {
   background-color: #710d0d;
@@ -38,4 +39,38 @@ html {
   text-align: center;
   background-color: #fff;
   color: #710d0d;
+}
+/* Dashboard admin */
+.navbar-nav.navbar-right li a {
+  color: #fff;
+  font-size: 1.2em;
+}
+.navbar-nav.navbar-right li a:hover {
+  color: #dcdcdc;
+}
+.dropdown-toggle {
+  background-color: transparent !important;
+}
+.dropdown-menu {
+  background-color: #710d0d;
+}
+.dropdown-menu li a:hover {
+  background: #710d0d;
+}
+.navbar-default {
+  background-color: #710d0d;
+  padding: 10px 2%;
+}
+.navbar-default .navbar-brand {
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #fff;
+  font-family: 'futuraBold';
+}
+.navbar-default .navbar-brand img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
 }
