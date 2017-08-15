@@ -1,24 +1,36 @@
 <div class="row">
     <div class="col-md-2">
-        <h2>Productos</h2> 
+        <h2 class="title-option">Productos</h2> 
     </div>
     <div class="col-md-2">
-        <button type="button" id="add_product" class="btn btn-default">Agregar Producto</button>
+        <button type="button" id="add_product" class="btn btn-style btn-m-t">Agregar Producto</button>
     </div>
 </div>
 <div class="row">
     <div class="col-md-4 col-md-offset-8">
         <form action="admin/search" method="post" id="searchForm">
             <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
-            <label for="searh">Buscar producto</label>
-            <input type="text" class="form-control" id="search" name="search" placeholder="Buscar">
-            <input type="submit" id="btn_search" value="Buscar" class="btn btn-primary">
+            <div class="row">
+                <div class="col-md-8">
+                    <input type="text" class="form-control text-placeholder" id="search" name="search" placeholder="Buscar producto">
+                </div>
+                <div class="col-md-4">
+                    <input type="submit" id="btn_search" value="Buscar" class="btn btn-style">
+                </div>
+            </div>
         </form>
     </div>
 </div>
 <div class="row">
     <div class="col-md-12">
-        <p>Filtrar</p>
+        <p class="num-all-products">Todos(12)</p>
+        <form class="form-filter-producs" action="">
+            <select name="filter" id="filter">
+                <option value="brand">Marca</option>
+                <option value="category">Categoría</option>
+                <input type="submit" value="Filtrar" class="btn-style">
+            </select>
+        </form>
     </div>
 </div>
 <div class="row">
@@ -32,7 +44,7 @@
                     <th>Marca</th> 
                     <th>Categoría</th> 
                     <th>Imagen</th> 
-                    <ht>Opciones</ht>
+                    <th>Opciones</th>
                 </tr> 
             </thead>
             <tbody class="table_products">
@@ -47,8 +59,10 @@
         @endif   
             </tbody>
         </table>
+        <div class="cont-pagination">
         @if(count($products))
             {{ $products->links() }} <!-- Muestra la paginación y le decimos que use bootstrap 4 -->
         @endif 
+        </div>
     </div>
 </div>

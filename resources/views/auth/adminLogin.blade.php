@@ -15,9 +15,8 @@
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">Usuario</label>
-
-                            <div class="col-md-6">
+                            <div class="col-md-8 col-sm-offset-2">
+                                <label for="email" class="control-label">Usuario</label>
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
                                 @if ($errors->has('email'))
@@ -29,9 +28,8 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Contraseña</label>
-
-                            <div class="col-md-6">
+                            <div class="col-md-8 col-sm-offset-2">
+                                <label for="password" class="control-label">Contraseña</label>
                                 <input id="password" type="password" class="form-control" name="password" required>
 
                                 @if ($errors->has('password'))
@@ -43,7 +41,7 @@
                         </div>
 
                         <div class="form-group">
-                            <div class="col-md-6 col-md-offset-4">
+                            <div class="col-md-8 col-sm-offset-2">
                                 <div class="checkbox">
                                     <label>
                                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}> Recordar sesión
@@ -53,7 +51,7 @@
                         </div>
                 
                         <div class="form-group">
-                            <div class="col-md-8 col-md-offset-4">
+                            <div class="col-md-8 col-md-offset-2">
                                 <button type="submit" class="btn send-login">Entrar </button>
                             <!--    
                                 <a class="btn btn-link" href="{{ route('password.request') }}">

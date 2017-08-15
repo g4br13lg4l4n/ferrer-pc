@@ -11,16 +11,14 @@ class GetProductoController extends Controller
 {
     public function getProducto()
     {
-    //    $relations = CategoryAndBrandAndProducto::belongsTo(Producto::class);
-    //    return  CategoryAndBrandAndProducto::all();
+        $products = Producto::paginate(10);
+        $brands = Brand::all();
+        $categories = Category::all();
+        $CBP = CategoryAndBrandAndProducto::all();
 
-    //    $categories = Category::all();
-    //    return $categories->brand()->attach();
-    
-    $category = new Category();
-    return $category->searchBrandtoCategory();
-   // $category->searchBrandtoCategory()->attach($roleId);
-
+         $ms = new CategoryAndBrandAndProducto;
+        return $ms->getTableRationProducto();
     }
     
+     
 }

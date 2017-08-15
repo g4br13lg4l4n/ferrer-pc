@@ -3,15 +3,38 @@
    font-style normal
    src url(../fonts/Futura_Bold.otf)
 
+ @font-face
+   font-family SFNSTextSemibold
+   font-style normal
+   src url(../fonts/SFNSTextSemibold.otf)
+
+ @font-face
+   font-family SFTextRegular
+   font-style normal
+   src url(../fonts/SFText-Regular.otf)
+
+@font-face
+   font-family SanFranciscoTextBold
+   font-style normal
+   src url(../fonts/SanFranciscoText-Bold.otf)
+
+@font-face
+   font-family SanFranciscoTextRegular
+   font-style normal
+   src url(../fonts/SanFranciscoText-Regular.otf)
+
+black = #272727
+
 /* Login admin */
-#app, html
+#app
+  height: 100vh
   background-color: #710D0D
 
 .panel-login-admin
   color: #fff
-  margin-top: 8vh
+  margin-top: 6vh
   .login-admin-title
-    font-size: 2.2em
+    font-size: 2em
     font-family: 'futuraBold'
     text-align: center
     letter-spacing: .6px
@@ -22,19 +45,33 @@
     justify-content: center
     align-items: center
     img 
-      width: 120px
-      height: 120px
+      width: 100px
+      height: auto
     .m-l-2
       margin-left: 2vw
   .form-horizontal
-    margin-top: 10vh
+    margin-top: 6vh
 
 .send-login
   text-align: center
   background-color: white 
+  font-size: 1.1em
+  font-weight: 800
   color: #710D0D
+  float: right
+  padding-left: 22px
+  padding-right: 22px
 
 /* Dashboard admin */
+#app-dash
+  background-color: #D1D1D1
+/* NAV */
+.navbar
+  margin-bottom: 0
+
+.navbar-static-top
+  border-width: 0
+
 .navbar-nav.navbar-right
   li 
     a
@@ -56,6 +93,8 @@
   background-color: #710D0D
   padding: 10px 2%
   .navbar-brand
+    font-size: 1.6em
+    letter-spacing: .6px
     padding: 10px 0
     display: flex
     flex-direction: row 
@@ -66,3 +105,91 @@
       width: 50px
       height: auto
       margin-right: 10px
+
+/* Options manu  */
+.group-options
+  height: 100vh
+  margin-top: -2px
+  background-color: #9B3E3E
+  .btn-group-vertical
+    width: 100%
+    .btn-option
+      position: relative
+      text-align: left
+      padding-left: 10%
+      font-size: 1.1em
+      letter-spacing: .8px
+      height: 45px
+      font-family: 'SFNSTextSemibold'
+      color: white
+      width: 100%
+      border: 0
+      background-color: transparent
+      &.active 
+        background-color: #B2B2B2
+        &:before 
+          content: ''
+          position: absolute
+          top: 0
+          right: -12px
+          border-top: 23px solid transparent
+          border-bottom: 23px solid transparent
+          border-left: 12px solid #B2B2B2
+
+/* Panels options */
+
+.panel
+  background-color: transparent
+  .title-option
+    color: black
+    font-family: SanFranciscoTextBold
+    font-size: 2.4em
+
+.text-placeholder
+  font-family: SanFranciscoTextRegular
+.btn-m-t
+  margin-top: 22px
+.btn-style
+  padding-left: 20px
+  padding-right: 20px
+  font-family: 'SFTextRegular'
+  background-color: #989898
+  border: 0
+  border-radius: 8px
+  color: #fff
+  &:hover
+    background-color: #fff
+    color: black
+
+.num-all-products
+  display: inline-block
+  color: black
+  font-family: 'SanFranciscoTextBold'
+  font-size: 1.1em
+.form-filter-producs
+  display: inline-block
+  select
+    width: 120px
+    margin: 0 15px
+
+.table
+  thead
+    background-color: #A9A9A9
+    tr 
+      th 
+        color: black
+  .table_products
+    background-color: white
+
+.dropdown-menu 
+  left: auto 
+  right: 0
+  li 
+   a
+    color: white
+    font-family: 'SanFranciscoTextRegular'
+    &:hover
+      color: #c7c7c7
+
+.cont-pagination
+  text-align: center

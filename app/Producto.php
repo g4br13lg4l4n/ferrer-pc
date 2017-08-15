@@ -23,7 +23,6 @@ class Producto extends Model
     {
         return Producto::where('name', 'LIKE', '%'.$val.'%')->get();
     }
-
     public function serchProductToRalations()
     {
         return $this->hasMany('App\CategoryAndBrandAndProducto');

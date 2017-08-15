@@ -1,21 +1,25 @@
 @extends('layouts.dashAdmin')
 
 @section('content')
-<div class="container">
+<div class="container-fluid">
     <div class="row">
         <div class="col-md-2">
             <div class="row">
+            <div class="group-options">
                 <div class="btn-group-vertical" role="group" aria-label="...">
-                    <button type="button" class="btn btn-default active optionPanel" value="product">Productos</button>
-                    <button type="button" class="btn btn-default optionPanel"  value="add_brand">Agregar Marca</button>
-                    <button type="button" class="btn btn-default optionPanel" value="category">Agregar Categoría</button>
-                    <button type="button" class="btn btn-default optionPanel" value="upexcel">Subir Excel</button>
-                    <button type="button" class="btn btn-default optionPanel" value="createUser">Crear Usuarios</button>
+                    <button type="button" class="btn btn-option active optionPanel" value="product">Productos</button>
+                    <button type="button" class="btn btn-option optionPanel"  value="add_brand">Agregar Marca</button>
+                    <button type="button" class="btn btn-option optionPanel" value="category">Agregar Categoría</button>
+                    <button type="button" class="btn btn-option optionPanel" value="upexcel">Subir Excel</button>
+                    <button type="button" class="btn btn-option optionPanel" value="createUser">Slider</button>
+                    <button type="button" class="btn btn-option optionPanel" value="createUser">Crear Usuarios</button>
                 </div>
+               </div> 
             </div>
+            
         </div>
         <div class="col-md-10">
-            <div class="panel panel-default panels">
+            <div class="panel panels">
                 <section id="product">
                      @include('administrator.panels.prducts')
                 </section>
@@ -32,7 +36,7 @@
                      @include('administrator.panels.createUser')
                 </section>
             </div>
-            <div class="panel panel-default add_product" style="display:none;">
+            <div class="panel add_product" style="display:none;">
                 @include('administrator.viewAdmin.addProduct') 
             </div>
         </div>

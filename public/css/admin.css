@@ -3,17 +3,37 @@
   font-style: normal;
   src: url("../fonts/Futura_Bold.otf");
 }
+@font-face {
+  font-family: SFNSTextSemibold;
+  font-style: normal;
+  src: url("../fonts/SFNSTextSemibold.otf");
+}
+@font-face {
+  font-family: SFTextRegular;
+  font-style: normal;
+  src: url("../fonts/SFText-Regular.otf");
+}
+@font-face {
+  font-family: SanFranciscoTextBold;
+  font-style: normal;
+  src: url("../fonts/SanFranciscoText-Bold.otf");
+}
+@font-face {
+  font-family: SanFranciscoTextRegular;
+  font-style: normal;
+  src: url("../fonts/SanFranciscoText-Regular.otf");
+}
 /* Login admin */
-#app,
-html {
+#app {
+  height: 100vh;
   background-color: #710d0d;
 }
 .panel-login-admin {
   color: #fff;
-  margin-top: 8vh;
+  margin-top: 6vh;
 }
 .panel-login-admin .login-admin-title {
-  font-size: 2.2em;
+  font-size: 2em;
   font-family: 'futuraBold';
   text-align: center;
   letter-spacing: 0.6px;
@@ -26,21 +46,36 @@ html {
   align-items: center;
 }
 .panel-login-admin .login-admin-logoTitle img {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: auto;
 }
 .panel-login-admin .login-admin-logoTitle .m-l-2 {
   margin-left: 2vw;
 }
 .panel-login-admin .form-horizontal {
-  margin-top: 10vh;
+  margin-top: 6vh;
 }
 .send-login {
   text-align: center;
   background-color: #fff;
+  font-size: 1.1em;
+  font-weight: 800;
   color: #710d0d;
+  float: right;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 /* Dashboard admin */
+#app-dash {
+  background-color: #d1d1d1;
+}
+/* NAV */
+.navbar {
+  margin-bottom: 0;
+}
+.navbar-static-top {
+  border-width: 0;
+}
 .navbar-nav.navbar-right li a {
   color: #fff;
   font-size: 1.2em;
@@ -62,6 +97,8 @@ html {
   padding: 10px 2%;
 }
 .navbar-default .navbar-brand {
+  font-size: 1.6em;
+  letter-spacing: 0.6px;
   padding: 10px 0;
   display: flex;
   flex-direction: row;
@@ -73,4 +110,102 @@ html {
   width: 50px;
   height: auto;
   margin-right: 10px;
+}
+/* Options manu  */
+.group-options {
+  height: 100vh;
+  margin-top: -2px;
+  background-color: #9b3e3e;
+}
+.group-options .btn-group-vertical {
+  width: 100%;
+}
+.group-options .btn-group-vertical .btn-option {
+  position: relative;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 1.1em;
+  letter-spacing: 0.8px;
+  height: 45px;
+  font-family: 'SFNSTextSemibold';
+  color: #fff;
+  width: 100%;
+  border: 0;
+  background-color: transparent;
+}
+.group-options .btn-group-vertical .btn-option.active {
+  background-color: #b2b2b2;
+}
+.group-options .btn-group-vertical .btn-option.active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -12px;
+  border-top: 23px solid transparent;
+  border-bottom: 23px solid transparent;
+  border-left: 12px solid #b2b2b2;
+}
+/* Panels options */
+.panel {
+  background-color: transparent;
+}
+.panel .title-option {
+  color: #272727;
+  font-family: SanFranciscoTextBold;
+  font-size: 2.4em;
+}
+.text-placeholder {
+  font-family: SanFranciscoTextRegular;
+}
+.btn-m-t {
+  margin-top: 22px;
+}
+.btn-style {
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: 'SFTextRegular';
+  background-color: #989898;
+  border: 0;
+  border-radius: 8px;
+  color: #fff;
+}
+.btn-style:hover {
+  background-color: #fff;
+  color: #272727;
+}
+.num-all-products {
+  display: inline-block;
+  color: #272727;
+  font-family: 'SanFranciscoTextBold';
+  font-size: 1.1em;
+}
+.form-filter-producs {
+  display: inline-block;
+}
+.form-filter-producs select {
+  width: 120px;
+  margin: 0 15px;
+}
+.table thead {
+  background-color: #a9a9a9;
+}
+.table thead tr th {
+  color: #272727;
+}
+.table .table_products {
+  background-color: #fff;
+}
+.dropdown-menu {
+  left: auto;
+  right: 0;
+}
+.dropdown-menu li a {
+  color: #fff;
+  font-family: 'SanFranciscoTextRegular';
+}
+.dropdown-menu li a:hover {
+  color: #c7c7c7;
+}
+.cont-pagination {
+  text-align: center;
 }

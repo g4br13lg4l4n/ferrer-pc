@@ -32,7 +32,7 @@
                     <!-- Branding Image -->
                     
                     <a class="navbar-brand" href="{{ url('/admin') }}">
-                        <img src="{{ asset('images/ferrer.png') }}"> </img>Ferrer Pc
+                        <img src="{{ asset('images/ferrer.png') }}"> </img>Ferrer PC
                     </a> 
                 
                 </div>
