@@ -2,6 +2,8 @@ import React from 'react'
 
 import {Items} from './items'
 
+import axios from 'axios'
+
 export class Subcategories extends React.Component {
   constructor (props) {
     super()

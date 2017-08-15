@@ -1,0 +1,102 @@
+.navbar   
+  background-color: $ferrerColor
+  display:flex
+  justify-content: center
+  align-items: center
+  height: 166px
+
+  &-content
+    display: flex
+    justify-content: space-around
+    align-items: center
+    flex-direction: row
+    flex: 0 1 1200px
+    flex-wrap: wrap;
+
+    &-title
+      display:flex
+      align-items: center
+      flex-direction: row
+      flex: 0 1 280px
+      flex-wrap: wrap
+      &-logo
+        width: 70px
+        height: 70px
+      & h1
+        color: white
+        font-size: 22px
+        font-family: 'Helvetica'
+        margin-left: 18px
+
+    &-navigation
+      display: flex
+      justify-content: center
+      align-items: center
+      flex-direction: column
+      width: 650px
+
+      &-menu
+        padding:0
+        width: 650px
+        list-style: none
+        display: flex
+        justify-content: space-around
+        align-items: center
+        font-size: 14px
+        font-weight: bold
+
+        &-item:first-child 
+          margin-left: -30px
+
+        &-item
+          padding:0;
+          margin: 0;
+          text-decoration: none
+
+          & a 
+            color: white
+            text-decoration: none
+            text-align: center
+            display: block
+            font-family: 'Helvetica'
+            font-weight: 400
+            letter-spacing: .5px
+
+      &-form
+        width: auto 
+        position: relative
+        &-input
+          border-radius: .25em
+          box-shadow: 0 1px 0 #bfbebf
+          padding: .5em 1.75em
+          padding-left: 2.7em
+          height: 48px
+          width: 650px
+          position: relative
+          border: 0
+          font-size: .9em
+          color: rgba(123,123,123,0.78)
+
+.busqueda.fa.fa-search 
+  position: absolute
+  top: 32% 
+  left: 2%
+  font-size: 1.2em
+  color: #5C5C5C
+
+.info
+  margin: 0
+  padding: 0
+  background: rgba(113,13,13,0.85);
+  color: #FFFFFF
+  display: flex;
+  justify-content: center
+  align-items:center
+  height: 120px
+
+  &-content
+    flex: 0 0 775px
+
+    & h2
+      font-size: 26px
+      text-align: center          
