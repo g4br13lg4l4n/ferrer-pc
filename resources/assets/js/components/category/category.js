@@ -5,15 +5,15 @@ import {getCategories} from '../../api/api'
 
 import {Categories} from './categories'
 
-const url = 'api/productos'
-
 export class Category extends React.Component {
   constructor () {
     super ()
-
+    this.url = '/api/productos'
   }
 
   componentDidMount() {
+    let datos = getCategories(this.url)
+    console.log(datos)
   }
 
   render () {

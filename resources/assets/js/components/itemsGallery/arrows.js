@@ -23,7 +23,6 @@ export class Slide extends React.Component {
   }
 
   render() {
-    console.log(fillArray(2))
     return (
       <div>
         <TransitionGroup

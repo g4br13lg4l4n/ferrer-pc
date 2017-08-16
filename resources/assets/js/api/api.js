@@ -2,12 +2,13 @@ import axios from 'axios'
 
 module.exports = {
 
-  getCategories(url){
-    axios.get(url).then( (res) => {
-      return res.data
-    }).catch( (err) => {
-      console.log(err)
-    })
+  async getCategories(url){
+    try {
+      const datos = await axios('api/productos')
+    } catch (e) {
+      console.log(e)
+    }
+    
   },
 
 }
