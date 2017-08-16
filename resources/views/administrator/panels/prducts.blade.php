@@ -6,7 +6,7 @@
         <button type="button" id="add_product" class="btn btn-style btn-m-t">Agregar Producto</button>
     </div>
 </div>
-<div class="row">
+<div class="row m-t-form-group">
     <div class="col-md-4 col-md-offset-8">
         <form action="admin/search" method="post" id="searchForm">
             <input type="hidden" name="_token" value="{{ csrf_token() }}"> 
@@ -23,7 +23,7 @@
 </div>
 <div class="row">
     <div class="col-md-12">
-        <p class="num-all-products">Todos(12)</p>
+        <p class="label-input">Todos(12)</p>
         <form class="form-filter-producs" action="">
             <select name="filter" id="filter">
                 <option value="brand">Marca</option>

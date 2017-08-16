@@ -2663,19 +2663,6 @@
     .image-gallery-index {
       font-size: .8em;
       padding: 5px 10px; } }
-<<<<<<< HEAD
-#app
-  background-color: #710D0D;body html {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-=======
->>>>>>> 45d7fa9a0b805abc412c912838516ef26cf0716d
 .navbar {
   background-color: #710d0d;
   display: -webkit-box;

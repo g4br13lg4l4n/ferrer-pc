@@ -30,7 +30,6 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.1",
     "url-loader": "^0.5.9",
-    "vue": "^2.1.10",
     "webpack": "^3.4.1",
     "webpack-php-loader": "^0.3.2"
   },
