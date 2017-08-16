@@ -29,7 +29,7 @@ export class Subcategories extends React.Component {
   render () {
     return (
       <li onClick={this.switchItems}>
-        <h1>object</h1>
+        <h1>soy un objeto ekis de</h1>
       </li>
     )
   }

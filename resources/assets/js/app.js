@@ -7,6 +7,7 @@ import {Gallery} from './components/gallery/gallery'
 import {Info} from './components/info/info'
 import {MainContent} from './components/main/main'
 import {Footer} from './components/footer/footer'
+import {ItemsGallery} from './components/itemsGallery/itemsGallery'
 
 class App extends React.Component {
   render () {
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Gallery/>
         <Info/>
         <MainContent/>
+        <ItemsGallery/>
         <Footer/>
       </div>
     )

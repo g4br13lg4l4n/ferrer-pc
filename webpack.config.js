@@ -45,7 +45,8 @@ module.exports = {
         test : /\.js/, exclude : /(node_modules)/, use : [{
           loader : 'babel-loader',
           options : {
-            presets : ['react', 'es2015', 'stage-0']
+            presets : ['react','es2016','es2017','stage-0'],
+            plugins: ['babel-plugin-transform-es2015-modules-commonjs']
           }
         }]
       },
