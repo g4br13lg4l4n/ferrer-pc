@@ -8,6 +8,7 @@ $backgroundColor = #f1f1f1;
 @import "./categories/categories.styl"
 @import "./BoxItems/itembox.styl"
 @import "./mainContent/mainContent.styl"
+@import "./footer/footer.styl"
 
 body html 
   margin:0
@@ -19,63 +20,22 @@ body
   padding:0
 
 .test
-  display:none;  
+  display:none
+
+.example-enter 
+  opacity: 0.01;
 
 
-.footer
-  color: $backgroundColor
-  height:500px 
-  background-color: $ferrerColor
-  display:flex
-  justify-content: space-around
-  align-items:center
-  flex-direction:column
+.example-enter.example-enter-active 
+  opacity: 1;
+  transition: opacity 500ms ease-in;
 
-  &-content
-    width: 100%
-    flex: 0 0 300px
-    display:flex
-    justify-content: space-around
-    align-items: center
 
-    &-form
-      width: 340px
-      display: flex
-      justify-content: center
-      align-items: center
-      flex-direction:column
+.example-leave 
+  opacity: 1;
 
-      input
-        width: 330px
-        height 50px 
-        border-radius: 4px
-        margin-bottom:10px
-        border:none
-        line-height: normal
-        padding-left:10px
 
-      input:nth-child(4)
-        height : 121px
+.example-leave.example-leave-active 
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
 
-  &-section
-    width: 340px
-    display:flex
-    justify-content: space-between
-    align-items: center
-    
-    input 
-      color:white
-      height: 31px
-      width: 125px
-      background: #C7071E;
-      border-radius: 9px;
-      border:none
-      border-style: none
-      outline: 0
-
-  &-information
-    text-align: center
-
-  &-img
-    width: 100px
-    height: 100px

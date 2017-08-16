@@ -2663,19 +2663,6 @@
     .image-gallery-index {
       font-size: .8em;
       padding: 5px 10px; } }
-<<<<<<< HEAD
-#app
-  background-color: #710D0D;body html {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-=======
->>>>>>> 45d7fa9a0b805abc412c912838516ef26cf0716d
 .navbar {
   background-color: #710d0d;
   display: -webkit-box;
@@ -3034,18 +3021,6 @@ body {
   border-top: 1px solid #e1e1e1;
   padding-top: 35px;
 }
-body html {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background-color: #f1f1f1;
-  margin: 0;
-  padding: 0;
-}
-.test {
-  display: none;
-}
 .footer {
   color: #f1f1f1;
   height: 500px;
@@ -3133,4 +3108,32 @@ body {
 .footer-img {
   width: 100px;
   height: 100px;
+}
+body html {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+}
+.test {
+  display: none;
+}
+.example-enter {
+  opacity: 0.01;
+}
+.example-enter.example-enter-active {
+  opacity: 1;
+  -webkit-transition: opacity 500ms ease-in;
+  transition: opacity 500ms ease-in;
+}
+.example-leave {
+  opacity: 1;
+}
+.example-leave.example-leave-active {
+  opacity: 0.01;
+  -webkit-transition: opacity 300ms ease-in;
+  transition: opacity 300ms ease-in;
 }
