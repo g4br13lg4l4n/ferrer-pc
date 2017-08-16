@@ -25900,6 +25900,8 @@ var _categories = __webpack_require__(230);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+const url = 'api/productos';
+
 class Category extends _react2.default.Component {
   constructor() {
     super();
@@ -25907,8 +25909,9 @@ class Category extends _react2.default.Component {
   }
 
   componentDidMount() {
-    let datos = (0, _api.getCategories)(this.url);
-    console.log(datos);
+    let result = _api.api.getData(url).then(res => {
+      console.log(res);
+    });
   }
 
   render() {
@@ -25942,26 +25945,25 @@ exports.Category = Category;
 "use strict";
 
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.api = undefined;
+
 var _axios = __webpack_require__(211);
 
 var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { step("next", value); }, function (err) { step("throw", err); }); } } return step("next"); }); }; }
-
-module.exports = {
-
-  getCategories(url) {
-    return _asyncToGenerator(function* () {
-      try {
-        const datos = yield (0, _axios2.default)('api/productos');
-      } catch (e) {
-        console.log(e);
-      }
-    })();
+const api = exports.api = {
+  getData(url) {
+    return new Promise(resolve => {
+      _axios2.default.get(url).then(res => {
+        resolve(res.data);
+      });
+    });
   }
-
 };
 
 /***/ }),
