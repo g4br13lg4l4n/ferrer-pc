@@ -1,9 +1,11 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import {getCategories} from '../../api/api'
+import {api} from '../../api/api'
 
 import {Categories} from './categories'
+
+const url = 'api/productos'
 
 export class Category extends React.Component {
   constructor () {
@@ -12,8 +14,9 @@ export class Category extends React.Component {
   }
 
   componentDidMount() {
-    let datos = getCategories(this.url)
-    console.log(datos)
+    let result = api.getData(url).then( (res) => {
+      console.log(res)
+    })
   }
 
   render () {

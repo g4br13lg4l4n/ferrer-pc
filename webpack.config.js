@@ -78,6 +78,6 @@ module.exports = {
 
     new extractTextPlugin('styles.css'),
 
-    new cleanWebpackPlugin(['./public/js'])
+    new cleanWebpackPlugin(['./public/bundle.js'])
   ]
 }
