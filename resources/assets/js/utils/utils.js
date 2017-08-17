@@ -1,8 +1,8 @@
 import Logo from '../../img/discoduro.png'
 
-module.exports = {
+export const utils = {
 
-  fillArray (n) {
+  fillItems (n) {
 
     let _self = this
 

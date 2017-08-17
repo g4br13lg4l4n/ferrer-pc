@@ -2,7 +2,7 @@ import React from 'react'
 import TransitionGroup from 'react-addons-css-transition-group'
 
 import Items from '../category/items'
-import {fillArray} from '../../utils/utils'
+import {fillItems} from '../../utils/utils'
 
 export class Slide extends React.Component {
   constructor(props) {
@@ -13,13 +13,7 @@ export class Slide extends React.Component {
 
 
   handleAdd() {
-    return (
-      <div>
-        {fillArray(2).map( (el, i) => {
-          <h1>xD</h1>
-        })}
-      </div>
-    )
+    return (<div>xD</div>)
   }
 
   render() {

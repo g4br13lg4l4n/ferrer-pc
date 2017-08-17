@@ -1,40 +1,39 @@
 import React from 'react'
 import {render} from 'react-dom'
 
-import {api} from '../../api/api'
+import {utils} from '../../utils/utils'
 
+//Component's
 import {Categories} from './categories'
+import {Spinner} from '../spinner/spinner'
 
-const url = 'api/productos'
 
 export class Category extends React.Component {
   constructor () {
     super ()
     this.state = {
-      data : null
+      categorias : null
     }
 
-    this.url = '/api/productos'
     this.showCategories = this.showCategories.bind(this)
   }
 
-  componentDidMount() {
-    let result = api.getData(url).then( (res) => {
+  componentDidMount(){
+    setTimeout( () => {
       this.setState({
-        data : res
+        categorias : utils.fillCategories(7)
       })
-      console.log(this.state.data)
-    })
+    },2000)
   }
 
   showCategories () {
-    if(this.state.data === null) {
-      return (<h1>vacio :c</h1>)
+    if(this.state.categorias === null) {
+      return (<div><Spinner/></div>)
     }
 
     return (<div>
-      {this.state.data.map( (el,i) => {
-        return <h1 key={i}>xD</h1>
+      {this.state.categorias.map( (el, i) => {
+        return (<h1>xD</h1>)
       })}
     </div>)
   }
