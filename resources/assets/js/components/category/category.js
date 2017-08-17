@@ -6,13 +6,16 @@ import {utils} from '../../utils/utils'
 //Component's
 import {Categories} from './categories'
 import {Spinner} from '../spinner/spinner'
+import {Items} from './items'
+import {FancyBox} from '../fancybox/fancybox'
 
 
 export class Category extends React.Component {
   constructor () {
     super ()
     this.state = {
-      categorias : null
+      categorias : null,
+      items : null
     }
 
     this.showCategories = this.showCategories.bind(this)
@@ -21,7 +24,8 @@ export class Category extends React.Component {
   componentDidMount(){
     setTimeout( () => {
       this.setState({
-        categorias : utils.fillCategories(7)
+        categorias : utils.fillCategories(7),
+        items : utils.getItems(7)
       })
     },2000)
   }
@@ -33,7 +37,7 @@ export class Category extends React.Component {
 
     return (<div>
       {this.state.categorias.map( (el, i) => {
-        return (<h1>xD</h1>)
+        return (<Categories data={el} key={i}/>)
       })}
     </div>)
   }
@@ -44,7 +48,15 @@ export class Category extends React.Component {
         <div className="MainContent-category-categoryMenu">
           <h2 className="MainContent-category-categoryTitle">Categorias</h2>
           {this.showCategories()}
+          <FancyBox/>
         </div>
+
+        <div className="MainContent-category-resultBox">
+          {utils.getItems(4).map( (el, i) => {
+            return (<Items product={el} key={i}/>)
+          })}
+        </div>
+
       </section>
     )
   }

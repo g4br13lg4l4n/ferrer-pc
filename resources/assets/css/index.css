@@ -9,7 +9,8 @@ $backgroundColor = #f1f1f1;
 @import "./BoxItems/itembox.styl"
 @import "./mainContent/mainContent.styl"
 @import "./footer/footer.styl"
-@import "./spinner/spinner"
+@import "./spinner/spinner.styl"
+@import "./fancybox/fancybox.styl"
 
 body html 
   margin:0

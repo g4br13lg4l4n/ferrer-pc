@@ -9,7 +9,7 @@ export const Items = (props) => {
       <span className="itemBox-discount">
         <div className="itemBox-discount-contentDiscount">
           <p className="itemBox-discount-contentDiscount-percent">{data.discount}</p>
-          <p className="itemBox-discount-contentDiscount-discountText">{data.product.desc}</p>
+          <p className="itemBox-discount-contentDiscount-discountText">{data.desc}</p>
         </div>
       </span>
       <img src={data.img} alt={data.alt} className="itemBox-img"/>

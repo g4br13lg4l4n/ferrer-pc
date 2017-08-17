@@ -2,14 +2,8 @@ import Logo from '../../img/discoduro.png'
 
 export const utils = {
 
-  fillItems (n) {
-
-    let _self = this
-
-    let items = []
-
-    while(n-- > 0) {
-      items.push({
+  items() {
+    return {
       name : 'Missha All Around Safe Block Sebum Zero Sun',
       price : 120,
       alt : 'soy un alt',
@@ -18,8 +12,13 @@ export const utils = {
       priceDesc : 79.00,
       discount : '20%',
       desc: 'OFERTA'
+    }
+  },
 
-    })
+  getItems (n) {
+    let items = []
+    while(n-- > 0) {
+      items.push(this.items())
   }
     return items
   },
@@ -29,7 +28,7 @@ export const utils = {
 
     while(n-- > 0) {
       categories.push({
-        name : 'categorie names',
+        name : 'Categoria',
         subcategories : [
           {
             subname : 'subCategorie name',
