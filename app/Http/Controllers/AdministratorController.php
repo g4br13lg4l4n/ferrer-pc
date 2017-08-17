@@ -18,7 +18,7 @@ class AdministratorController extends Controller
     public function index()
     {
     //    $Product = new Producto();
-        $products = Producto::paginate(10);
+        $products = Producto::paginate(25);
         $brands = Brand::all();
         $categories = Category::all();
 
@@ -57,12 +57,14 @@ class AdministratorController extends Controller
             'image' => $ruta,
             'status' => $request->status
         ]); 
+    
+    $insertedId = $productos->id;
 
-        Category::where('id', $request->category)
-            ->update([
-                'brand_id' => $request->brand
-            ]);
-
+    CategoryAndBrandAndProducto::create([
+       'producto_id' => $insertedId,
+        'category_id' => $request->category,
+        'brand_id' => $request->brand
+    ]);
         return redirect('/admin/'); 
     }
 

@@ -46,18 +46,20 @@
         posting.done(function( data ) {
             $( ".table_products").html('');
             $.each( data, function( i, val ) {
+                !val.image ?  val.image = 'images/no_photo.png'  : val.image 
+
                 $( ".table_products").append( `
-                <tr id="`+ val.id +`">
                     <th scope="row">`+ val.code +`</th> 
                     <td>`+ val.name +`</td> 
                     <td>`+ val.stock +`</td> 
                     <td>`+ val.brand +`</td> 
                     <td>`+ val.category +`</td> 
-                    <td>`+ val.category +`</td> 
-                    <td> <img class="img-responsive img-rounded" src="`+ val.image +`" alt="`+ val.name +`" style="width: 80px; height: auto;"></td> 
+                    <td>  
+                        <img class="img-responsive img-rounded" src="`+ val.image +`" alt="`+ val.name +`" style="width: 80px; height: auto;">
+                    </td> 
                     <td>
                         <div class="btn-group">
-                            <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Action <span class="caret"></span>
                             </button>
                             <ul class="dropdown-menu">
@@ -67,9 +69,8 @@
                                 <li><a href="/admin/delete/`+val.id+`">Eliminar</a></li>
                             </ul>
                         </div>
-                        <td>
-                    </tr>
-                    ` ) ;
+                    <td>
+                 ` ) ;
                 }); 
             });
         });
