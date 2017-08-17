@@ -25905,13 +25905,43 @@ const url = 'api/productos';
 class Category extends _react2.default.Component {
   constructor() {
     super();
+    this.state = {
+      data: null
+    };
+
     this.url = '/api/productos';
+    this.showCategories = this.showCategories.bind(this);
   }
 
   componentDidMount() {
     let result = _api.api.getData(url).then(res => {
-      console.log(res);
+      this.setState({
+        data: res
+      });
+      console.log(this.state.data);
     });
+  }
+
+  showCategories() {
+    if (this.state.data === null) {
+      return _react2.default.createElement(
+        'h1',
+        null,
+        'vacio :c'
+      );
+    }
+
+    return _react2.default.createElement(
+      'div',
+      null,
+      this.state.data.map((el, i) => {
+        return _react2.default.createElement(
+          'h1',
+          { key: i },
+          'xD'
+        );
+      })
+    );
   }
 
   render() {
@@ -25926,11 +25956,7 @@ class Category extends _react2.default.Component {
           { className: 'MainContent-category-categoryTitle' },
           'Categorias'
         ),
-        _react2.default.createElement(
-          'h1',
-          null,
-          'xD'
-        )
+        this.showCategories()
       )
     );
   }
