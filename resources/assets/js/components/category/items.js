@@ -17,13 +17,14 @@ export class Items extends React.Component{
 
   showFancy() {
     if(this.state.showFancy) {
-      alert('hola xD')
+      return (<FancyBox/>)
     }
   }
 
   render () {
     return (
       <div className="itemBox" onClick={this.showFancy}>
+        <FancyBox/>
         <span className="itemBox-discount">
           <div className="itemBox-discount-contentDiscount">
             <p className="itemBox-discount-contentDiscount-percent">{this.data.discount}</p>

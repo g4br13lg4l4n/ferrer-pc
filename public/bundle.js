@@ -6750,7 +6750,7 @@ class Items extends _react2.default.Component {
 
   showFancy() {
     if (this.state.showFancy) {
-      alert('hola xD');
+      return _react2.default.createElement(_fancybox.FancyBox, null);
     }
   }
 
@@ -6758,6 +6758,7 @@ class Items extends _react2.default.Component {
     return _react2.default.createElement(
       'div',
       { className: 'itemBox', onClick: this.showFancy },
+      _react2.default.createElement(_fancybox.FancyBox, null),
       _react2.default.createElement(
         'span',
         { className: 'itemBox-discount' },

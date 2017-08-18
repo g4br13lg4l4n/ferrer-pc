@@ -3153,8 +3153,7 @@
 }
 #fancybox {
   background: url("http://fancyapps.com/fancybox/source/fancybox_overlay.png") repeat;
-  opacity: 1;
-  display: none;
+  opacity: 0.2;
   position: fixed;
   left: 0;
   right: 0;
