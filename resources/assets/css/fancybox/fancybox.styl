@@ -1,7 +1,7 @@
 #fancybox
   background url(http://fancyapps.com/fancybox/source/fancybox_overlay.png) repeat
-  opacity 0.9
-  //display none
+  opacity 1
+  display none
   position fixed
   left 0
   right 0
@@ -33,16 +33,30 @@
   z-index 8040
 
 .form-box
-  border:1px solid red
   display:flex
   justify-content: center
   align-items: center
+  font-size: 28px
+  color: #373738
 
 .form-image
-  border:1px solud blue
+  img
+    width:361px
+    height: 361px
 
 .form-group 
-  border:1px solid black
+  &--title
+    text-align: center
+
+  &--price
+    font-size: 18px
+    margin-left:45px
+    color: #B53C3C 
+
+  &--list
+    font-size: 16px
+    color: #585858
+
 .animated
   animation-duration 1s
   animation-fill-mode both

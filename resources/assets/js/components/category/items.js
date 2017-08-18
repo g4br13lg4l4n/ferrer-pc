@@ -1,23 +1,45 @@
 import React from 'react'
 import HDD from '../../../img/discoduro.png'
 
-export const Items = (props) => {  
-  const data = props.product
+//component's
+import {FancyBox} from '../fancybox/fancybox'
 
-  return (
-    <div className="itemBox">
-      <span className="itemBox-discount">
-        <div className="itemBox-discount-contentDiscount">
-          <p className="itemBox-discount-contentDiscount-percent">{data.discount}</p>
-          <p className="itemBox-discount-contentDiscount-discountText">{data.desc}</p>
-        </div>
-      </span>
-      <img src={data.img} alt={data.alt} className="itemBox-img"/>
-      <section className="itemBox-productDescription">
-        <h3 className="itemBox-productDescription-name">{data.name}</h3>
-        <span className="itemBox-productDescription-priceDesc">$ {data.priceDesc}</span>
-        <span className="itemBox-productDescription-price">$ {data.price}</span>
-      </section>
-    </div>
-  )
+export class Items extends React.Component{
+  constructor (props) {
+    super()
+    this.state = {
+      showFancy : false
+    }
+
+    this.data = props.product
+    this.showFancy = this.showFancy.bind(this)
+  }
+
+  showFancy() {
+    this.setState({
+      showFancy : !this.state.showFancy
+    })
+    if(this.state.showFancy) {
+      return (<div><FancyBox/></div>)
+    }
+  }
+
+  render () {
+    return (
+      <div className="itemBox" onClick={this.showFancy}>
+        <span className="itemBox-discount">
+          <div className="itemBox-discount-contentDiscount">
+            <p className="itemBox-discount-contentDiscount-percent">{this.data.discount}</p>
+            <p className="itemBox-discount-contentDiscount-discountText">{this.data.desc}</p>
+          </div>
+        </span>
+        <img src={this.data.img} alt={this.data.alt} className="itemBox-img"/>
+        <section className="itemBox-productDescription">
+          <h3 className="itemBox-productDescription-name">{this.data.name}</h3>
+          <span className="itemBox-productDescription-priceDesc">$ {this.data.priceDesc}</span>
+          <span className="itemBox-productDescription-price">$ {this.data.price}</span>
+        </section>
+      </div>
+    )
+  }
 }

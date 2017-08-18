@@ -11,7 +11,14 @@ export const utils = {
       price : 99.00,
       priceDesc : 79.00,
       discount : '20%',
-      desc: 'OFERTA'
+      desc: 'OFERTA',
+      skills: [
+        'resistente al agua y a prueba de golpes',
+        'Pasó la estricta prueba IEC 529 IPX7 y aprobó la estricta prueba militar MIL-STD-810G 516.5.',
+        'Indicador de luz azul LED',
+        'Cable USB envolvente',
+        'Tecnología USB 3.0'
+      ]
     }
   },
 
@@ -40,8 +47,14 @@ export const utils = {
               price : 99.00,
               priceDesc : 79.00,
               discount : '20%',
-              desc: 'OFERTA'
-        
+              desc: 'OFERTA',
+              skills: [
+                'resistente al agua y a prueba de golpes',
+                'Pasó la estricta prueba IEC 529 IPX7 y aprobó la estricta prueba militar MIL-STD-810G 516.5.',
+                'Indicador de luz azul LED',
+                'Cable USB envolvente',
+                'Tecnología USB 3.0'
+              ]
             }]
           },
           {

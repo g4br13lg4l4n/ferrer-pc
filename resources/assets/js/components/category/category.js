@@ -48,7 +48,6 @@ export class Category extends React.Component {
         <div className="MainContent-category-categoryMenu">
           <h2 className="MainContent-category-categoryTitle">Categorias</h2>
           {this.showCategories()}
-          <FancyBox/>
         </div>
 
         <div className="MainContent-category-resultBox">

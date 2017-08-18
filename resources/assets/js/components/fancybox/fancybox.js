@@ -3,22 +3,28 @@ import React from 'react'
 // util's
 import {utils} from '../../utils/utils'
 
-export const FancyBox = () => {
-  console.log(utils.items())
-  let data = utils.items()
+export const FancyBox = (props) => {
+
+  let data = props.data || utils.items()
 
   return (
     <div id="fancybox" className="fadeIn animated">
       <div className="fancybox-wrap">
-        <a href="javascript:;" className="fancybox-close"></a>
+        <a href="#" className="fancybox-close"></a>
         <div className="form-box">
-          <h2>Mostrar detalles</h2>
+
           <div className="form-image">
-            <h1>{data.name}</h1>
+            <img src={data.img}/>
           </div>
+
           <div className="form-group">
-            <label>{data.name}</label>
-            <input type="text"/>
+            <h3 className="form-group--title">{data.name}</h3>
+            <h4 className="form-group--price">$ {data.price}</h4>
+            <ul>
+              {data.skills.map( (el, i) => {
+                return <li className="form-group--list" key={i}>{el}</li>
+              })}
+            </ul>
           </div>
           
         </div>
