@@ -8,7 +8,7 @@ export class Items extends React.Component{
   constructor (props) {
     super()
     this.state = {
-      showFancy : false
+      showFancy : true
     }
 
     this.data = props.product
@@ -16,11 +16,8 @@ export class Items extends React.Component{
   }
 
   showFancy() {
-    this.setState({
-      showFancy : !this.state.showFancy
-    })
     if(this.state.showFancy) {
-      return (<div><FancyBox/></div>)
+      alert('hola xD')
     }
   }
 

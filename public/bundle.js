@@ -6741,7 +6741,7 @@ class Items extends _react2.default.Component {
   constructor(props) {
     super();
     this.state = {
-      showFancy: false
+      showFancy: true
     };
 
     this.data = props.product;
@@ -6749,15 +6749,8 @@ class Items extends _react2.default.Component {
   }
 
   showFancy() {
-    this.setState({
-      showFancy: !this.state.showFancy
-    });
     if (this.state.showFancy) {
-      return _react2.default.createElement(
-        'div',
-        null,
-        _react2.default.createElement(_fancybox.FancyBox, null)
-      );
+      alert('hola xD');
     }
   }
 
